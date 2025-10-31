@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Книжный магазин - Контакты</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Анимированные фигуры -->
+    <div class="floating-shapes">
+        <div class="shape shape-circle"></div>
+        <div class="shape shape-square"></div>
+        <div class="shape shape-triangle"></div>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Книжный уголок</div>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html" class="nav-link">Главная</a></li>
+                        <li><a href="./index2.html" class="nav-link">Каталог</a></li>
+                        <li><a href="./index3.html" class="nav-link">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="page active fade-in">
+            <div class="section">
+                <h1 class="section-title">Контакты</h1>
+                <p>Мы всегда рады помочь вам с выбором книг и ответить на все ваши вопросы.</p>
+            </div>
+            
+            <div class="section">
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-content">
+                            <h2>Наш адрес</h2>
+                            <p>г. Йошкар-Ола, ул. Советская, д. 150</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h2>Часы работы</h2>
+                            <p>Пн-Пт: 10:00 - 21:00</p>
+                            <p>Сб-Вс: 11:00 - 20:00</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h2>Контакты</h2>
+                            <p>Телефон: +7 (800) 555 35 35</p>
+                            <p>Email: info@bookshop.ru</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Схема проезда</h2>
+                <div class="map-container">
+                    <!-- Карта -->
+                    <img src="../images/vhod.jpg" alt="Карта проезда" usemap="#storemap">
+                    <map name="storemap">
+                        <area shape="poly" coords="305,192,397,191,396,392,307,389" alt="Вход в магазин" href="#" onclick="alert('Это вход в наш магазин!')">
+                    </map>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Книжный уголок. Все права защищены.</p>
+                <div class="social-links">
+                    <a href="#">Telegram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Обработка клика по области карты
+        document.addEventListener('DOMContentLoaded', function() {
+            const area = document.querySelector('area');
+            if (area) {
+                area.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert('Это вход в наш магазин!');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
